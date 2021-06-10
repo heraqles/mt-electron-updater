@@ -1,6 +1,6 @@
 {
-  "name": "electron-boilerplate",
-  "productName": "Electron Boilerplate",
+  "name": "mt-electron",
+  "productName": "MtElectron",
   "description": "Starter for your Electron application",
   "version": "1.0.0",
   "private": true,
@@ -30,9 +30,12 @@
     "e2e": "mocha temp/e2e.js --require source-map-support/register",
     "test": "npm run unit && npm run e2e",
     "start": "node build/start.js",
+    "build": "npm test && webpack --config=build/webpack.app.config.js --env=production && electron-builder",
     "release": "npm test && webpack --config=build/webpack.app.config.js --env=production && electron-builder -p 'onTagOrDraft'"
   },
   "dependencies": {
+    "electron-log": "^4.3.5",
+    "electron-updater": "^4.3.9",
     "fs-jetpack": "^4.1.0"
   },
   "devDependencies": {
@@ -42,7 +45,7 @@
     "chai": "^4.1.0",
     "css-loader": "^5.2.0",
     "electron": "^13.0.1",
-    "electron-builder": "^22.5.1",
+    "electron-builder": "^22.10.5",
     "electron-mocha": "^10.0.0",
     "mocha": "^8.3.2",
     "source-map-support": "^0.5.6",
