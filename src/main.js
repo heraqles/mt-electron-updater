@@ -13,7 +13,7 @@ import createWindow from "./helpers/window"
 import appMenuTemplate from "./menu/app_menu_template"
 import devMenuTemplate from "./menu/dev_menu_template"
 import editMenuTemplate from "./menu/edit_menu_template"
-import updater from "./updater"
+import { updater } from "./updater"
 
 // Save userData in separate folders for each environment.
 // Thanks to this you can use production and development versions of the app
